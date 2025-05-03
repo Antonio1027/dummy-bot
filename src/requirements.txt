@@ -1,3 +1,4 @@
 fastapi[standard]>=0.113.0
 pydantic>=2.7.0
-openai==0.26.5
+openai==1.77.0
+twilio==9.5.2
