@@ -17,14 +17,15 @@ docker run -d --name commercial_agent -p 80:80 dummy_bot
 Project configuration locally with a virtual environment
 
 ```console
-source src/.venv/bin/activate
-pip3 install -r src/requirements.txt
+cd src
+source .venv/bin/activate
+pip3 install -r requirements.txt
 ```
 
 ### Start local server
 
 ```console
-fastapi dev src/app/server.py
+fastapi dev app/server.py
 ```
 
 ## AWS deployment
