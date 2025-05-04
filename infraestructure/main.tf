@@ -7,18 +7,3 @@ terraform {
     }
 }
 
-provider "aws" {
-    region = "us-east-2"
-}
-
-variable "OPENAI_API_KEY" {
-    type = string
-}
-
-variable "TWILIO_ACCOUNT_SID" {
-    type = string
-}
-
-variable "TWILIO_AUTH_TOKEN" {
-    type = string
-}

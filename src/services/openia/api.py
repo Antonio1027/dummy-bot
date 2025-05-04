@@ -14,23 +14,3 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0,
     )
 
     return response.choices[0].message.content
-
-# def get_tools():
-#     return [{
-#         "type": "function",
-#         "function": {
-#             "name": "get_cars_with_detail",
-#             "description": "Use this function to get more information about a car",
-#             "parameters": {
-#                 "type": "object",
-#                 "properties": {
-#                     "version": {"type": "string", "description": "This is the version of a car that belongs to a brand"},
-#                     "year": {"type": "string", "description": "Car manufactured year"}
-#                 },
-#                 "required": ["version", "year"],
-#                 "additionalProperties": False
-#             }
-#         }
-#     }]
-
-

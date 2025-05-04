@@ -1,4 +1,4 @@
-# Commertial Agent
+# Commercial Agent
 
 This project create a bot that simulate a commertial agent. The agent is based on LLMs from openIA to create chat completions with the model gpt-3.5-turbo
 
@@ -20,7 +20,7 @@ make setup-local
 ### Start local server
 
 ```console
-fastapi dev app/server.py
+make start-local-server
 ```
 
 ### Environment variable

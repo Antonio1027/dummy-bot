@@ -4,7 +4,7 @@ class CarRepository():
 
     @staticmethod
     def get_cars():
-        file = open('./database/cars.json')
+        file = open('./src/database/cars.json')
         data = json.load(file)
         return data.get("Cars", {})
 

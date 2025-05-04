@@ -1,6 +1,6 @@
 data "archive_file" "bot_message_processor_code" {
     type = "zip"
-    source_dir = "${path.module}/../src/"
+    source_dir = "${path.module}/../src"
     output_path = "${path.module}/../src/bot_message_processor.zip"
 }
 
