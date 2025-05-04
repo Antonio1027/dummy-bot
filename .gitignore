@@ -6,3 +6,4 @@ terraform.tfstate
 terraform.tfstate.backup
 bot_message_processor.zip
 dependencies.zip
+python/
