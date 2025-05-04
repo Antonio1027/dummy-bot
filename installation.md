@@ -1,38 +1,24 @@
 # Dummy bot
 
-## Create image
+## Docker
+
+### Build Image
+
+Install docker to build the image with the following command:
 
 ```console
-docker build -t dummy_bot .
+make build-image
 ```
 
-## Create container
+### Create container
 
 ```console
-docker run -d --name commercial_agent -p 80:80 dummy_bot
-```
-
-## Run locally
-
-Project configuration locally with a virtual environment
-
-```console
-cd src
-source .venv/bin/activate
-pip3 install -r requirements.txt
-```
-
-### Start local server
-
-```console
-fastapi dev app/server.py
+make setup-container
 ```
 
 ## AWS deployment
 
-Requirements:
-
-Create a user for api calls in IAM in aws web console and download credentials to configure aws cli.
+This project can be deployed in aws for testing porpuses with terraform, to do that you need to configure AWS cli tool.
 
 ### Install AWS CLI
 
@@ -54,13 +40,15 @@ aws_secret_access_key =
 
 ## Install terraform
 
+Terraform is a IaC tool, and we can create cloud resources in many providers.
+This project is configured to create the resources in aws.
+
+To create the cloud resources of this project, you have to install terraform locally. Check the documentation on the link below:
+
 https://developer.hashicorp.com/terraform/install
 
-Execute the following commands to create the aws resources to deploy the code:
+After installation, locate into the root directory of the project and execute the following commands to create the aws resources:
 
 ```console
-cd infraestructure
-terraform init
-terraform plan
-terraform apply
+make deploy-service
 ```
