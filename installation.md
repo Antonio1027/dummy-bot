@@ -1,4 +1,4 @@
-# Dummy bot
+# Additional configurations
 
 ## Docker
 
