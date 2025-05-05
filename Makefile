@@ -19,9 +19,6 @@ setup-local:
 	pip3 install -r requirements.txt && \
 	fastapi dev server.py
 
-start-local-server:
-	fastapi dev src/server.py
-
 deploy-service:
 	cd infraestructure && terraform init && terraform apply -auto-approve
 
