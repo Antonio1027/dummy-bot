@@ -37,3 +37,18 @@ The application requires those keys of external API calls:
 
 - OpenIA API 
 - Twilio
+
+
+### Install ngrok
+
+We use ngrok to expose the local application to public access and configure our endpoint as a webhook to receive messages from twilio.
+
+Install ngrok with the instructions on the [Official documentation](https://ngrok.com/docs/getting-started/)
+After installation run the commands below:
+
+```console
+ngrok config add-authtoken YOUR_TOKEN
+ngrok http http://127.0.0.1:8000
+```
+
+![ngrok terminal](/docs/img/ngrok_terminal.png)
