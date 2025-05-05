@@ -3,7 +3,7 @@ from src.database.repositories.car_respository import CarRepository
 from src.database.repositories.brand_repository import BrandRepository
 from src.services.openia.api import get_completion_from_messages
 
-def message_processor(query: str, user_number: str):
+def message_processor(query: str, user_number: str, sender_number: str):
     brands_list = BrandRepository.get_brands()
     brands = "\n".join(brands_list)
     cars_with_details = ""
@@ -17,7 +17,7 @@ def message_processor(query: str, user_number: str):
 
     system_content = f"""
         You are a commercial agent at Kavak, just respond in spanish.
-        You can get and sumarize information from this website https://www.kavak.com/mx/blog/sedes-de-kavak-en-mexico
+        You can get and summarize information from this website https://www.kavak.com/mx/blog/sedes-de-kavak-en-mexico
         to make known the company's value proposition.
 
         List of brands of available cars in the catalog:
@@ -40,7 +40,7 @@ def message_processor(query: str, user_number: str):
         },
     ]
     content = get_completion_from_messages(messages)
-    get_response(content, user_number)
+    get_response(content, user_number, sender_number)
     return {
         "message": str(content)
     }

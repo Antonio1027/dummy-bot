@@ -8,4 +8,4 @@ app = FastAPI()
 async def reply_message(request: Request):
     body = await request.body()
     data = convert_byte_string_request_to_dict(body)
-    return message_processor(data.get("Body"), data.get("From"))
+    return message_processor(data.get("Body"), data.get("From"), data.get("To"))
